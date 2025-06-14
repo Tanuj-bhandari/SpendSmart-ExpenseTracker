@@ -44,12 +44,12 @@ const TransactionForm = ({ fetchTransactions, editTxn, setEditTxn }) => {
     try {
       if (editTxn) {
         await axios.put(
-          `${process.env.REACT_APP_API_URL}/api/transactions/${editTxn._id}`,
+          "https://spendsmart-expensetracker.onrender.com/api/transactions/${editTxn._id}",
           payload,
           { headers: { Authorization: `Bearer ${token}` } }
         );
       } else {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/transactions`, payload, {
+        await axios.post("https://spendsmart-expensetracker.onrender.com/api/transactions", payload, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
