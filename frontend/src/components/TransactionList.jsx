@@ -7,7 +7,7 @@ const TransactionList = ({ transactions, fetchTransactions, setEditTxn }) => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this transaction?")) {
       try {
-        await axios.delete("https://spendsmart-expensetracker.onrender.com/api/transactions/${id}", {
+        await axios.delete(`https://spendsmart-expensetracker.onrender.com/api/transactions/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         fetchTransactions();
