@@ -10,7 +10,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, { email, password });
+      await axios.post("https://spendsmart-expensetracker.onrender.com/api/auth/register", { email, password });
       navigate("/login");
     } catch (err) {
       alert("Something went wrong! Try a different email.");
