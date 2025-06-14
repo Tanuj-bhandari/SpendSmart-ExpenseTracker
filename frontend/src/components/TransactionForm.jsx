@@ -44,12 +44,12 @@ const TransactionForm = ({ fetchTransactions, editTxn, setEditTxn }) => {
     try {
       if (editTxn) {
         await axios.put(
-          `http://localhost:5000/api/transactions/${editTxn._id}`,
+          `${process.env.REACT_APP_API_URL}/api/transactions/${editTxn._id}`,
           payload,
           { headers: { Authorization: `Bearer ${token}` } }
         );
       } else {
-        await axios.post("http://localhost:5000/api/transactions", payload, {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/transactions`, payload, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
