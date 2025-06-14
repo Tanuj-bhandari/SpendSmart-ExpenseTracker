@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000; /* Dark theme for GitHub Copilot style */
+  color: white; /* Ensures all text is white */
+}
+
+/* Ensures navbar & footer stick properly */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #111; 
+  border-bottom: 1px solid #222;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111; 
+  border-top: 1px solid #222;
+}
+
+
+.container {
+  flex-grow: 1; /* Ensures main content stretches fully */
+}
