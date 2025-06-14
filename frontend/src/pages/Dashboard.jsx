@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   const fetchTransactions = async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/transactions`, {
+      const res = await axios.get("https://spendsmart-expensetracker.onrender.com/api/transactions", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTransactions(res.data);
